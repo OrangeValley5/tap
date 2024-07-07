@@ -12,6 +12,8 @@
 body{
     margin: 0px;
     font-family: 'Poppins';
+    background-color: black;
+   
 }
 
 
@@ -210,26 +212,9 @@ nav a{
         display: none;
     }
 
-    .login-card{
-        width: 100%;
-        padding: 1rem 1.5rem;
-    }
 
-    .login-card input{
-        font-size: 14px;
-    }
 
-    .flow{
-        font-size: 12px;
-    }
-
-    .login-card p{
-        font-size: 12px;
-    }
-
-    .icon{
-        font-size: 12px;
-    }
+  
   }
 
     
@@ -237,7 +222,7 @@ nav a{
             .sec1-container{
                 display: flex;
                 flex-direction: row;
-                gap: 30px;
+                gap: 20px;
                 font-family: Bricolage Grotesque;
 
             }
