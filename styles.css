@@ -27,9 +27,9 @@ nav{
     color: white;
     display:  flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    padding: 0rem 4rem;
+    gap: 1.5rem;
     margin-bottom: 10px;
     font-family: Bricolage Grotesque;
 }
@@ -41,21 +41,6 @@ nav span{
     font-size: 24px;
 }
 
-nav ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-}
-
-nav a{
-    
-    border-radius: 20px;
-    color: inherit;
-    text-decoration: none;
-    transition: 0.3s ease-out;
-}
 
 .site-title span{
     font-weight: bold;
@@ -248,10 +233,12 @@ nav a{
             }
 
             .Walletdiv{
+                width: 100%;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                margin-bottom: 30px;
                 
                
             }
