@@ -34,55 +34,45 @@
 <body>
 
  
-    <div>
-        <div class="section1" >
-
-            <nav >
-            <h4 class="logo">Votex </h4>
-    
-           
-            </nav>
-    
-       
-            <div class="sec1-container">
-
-                <div class="sec1-txt-div2">
-
+  <div>
+    <div class="section1">
+        <nav>
+            <h4 class="logo">Votex</h4>
+        </nav>
+   
+        <div class="sec1-container" id="home">
+            <div class="sec1-txt-div2">
                 <img src="images/bolt.png" alt="">
                 <h1 id="counter">4,756</h1>                
-                </div>
-
-                <div class="sec1-img-div">
-                    <img  id="tapbutton" src="images/tapbutton.png" alt="">
-
-                </div>
-                
-                <div class="sec1-txt-div3">
-
-                  <img src="images/bolt.png" alt="">
-                  <h5>700 / 700</h5>  
-
-                </div>
-
-               
             </div>
 
-            <div class="sec1-txt-div4">
-
-               
-              <a href="#"></a>    
-              </div>
-
+            <div class="sec1-img-div">
+                <img id="tapbutton" src="images/tapbutton.png" alt="Tap Button">
+            </div>
             
-
+            <div class="sec1-txt-div3">
+                <img src="images/bolt.png" alt="">
+                <h5>700 / 700</h5>  
+            </div>
         </div>
 
-            
-      </div>
+        <div class="sec1-container" id="personnel" style="display: none;">
+            <h1>Personnel Page</h1>
+            <p>Content for the personnel page...</p>
+        </div>
 
+        <div class="sec1-container" id="wallets" style="display: none;">
+            <h1>Wallets Page</h1>
+            <p>Content for the wallets page...</p>
+        </div>
 
-      
-
+        <div id="bottomNav" class="sec1-txt-div4">
+            <img src="images/home.png" alt="Home" onclick="showPage('home')">
+            <img src="images/personel.png" alt="Personnel" onclick="showPage('personnel')">
+            <img src="images/wallets.png" alt="Wallets" onclick="showPage('wallets')">
+        </div>
+    </div>
+</div>
     
 
    
@@ -97,7 +87,7 @@
     AOS.init();
    </script>
    <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
+  document.addEventListener('DOMContentLoaded', (event) => {
     // Select the tapbutton image and counter elements
     const tapButton = document.getElementById('tapbutton');
     const counter = document.getElementById('counter');
@@ -115,6 +105,19 @@
     // Add a click event listener to the tapbutton image
     tapButton.addEventListener('click', incrementCounter);
 });
+
+// Function to show the specified page and hide the others
+function showPage(pageId) {
+    // Hide all pages
+    const pages = document.querySelectorAll('.sec1-container');
+    pages.forEach(page => {
+        page.style.display = 'none';
+    });
+
+    // Show the specified page
+    document.getElementById(pageId).style.display = 'block';
+}
+
 
    </script>
  
