@@ -250,6 +250,12 @@ nav span{
             }
 
 
+            .Walletdiv a{
+                text-decoration: none;
+                color: #fff;
+            }
+
+
             #home{
                 display: flex;
                 flex-direction: column;
