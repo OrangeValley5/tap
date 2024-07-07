@@ -173,6 +173,9 @@ nav a{
         .section1{
             padding: 30px 2rem;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .section2{
