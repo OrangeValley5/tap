@@ -54,11 +54,11 @@
               <div class="sec1-txt-div2">
 
                 <img src="images/bolt.png" alt="">
-                <h1>4,756</h1>                
+                <h1 id="counter">4,756</h1>                
             </div>
 
                 <div class="sec1-img-div">
-                    <img src="images/tapbutton.png" alt="">
+                    <img  id="tapbutton" src="images/tapbutton.png" alt="">
 
                 </div>
                 
@@ -78,22 +78,12 @@
                 <a href="#"></a>    
             </div>
                 
-          
-
             </div>
 
             
 
         </div>
 
-       
-
-       
-
-       
-
-           
-            
             
         </div>
 
@@ -120,59 +110,30 @@
     AOS.init();
    </script>
    <script>
-    document.querySelector('.menu-toggle').addEventListener('click', function() {
-  this.classList.toggle('open');
-});
-  </script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    // Select the tapbutton image and counter elements
+    const tapButton = document.getElementById('tapbutton');
+    const counter = document.getElementById('counter');
 
-  <script>
-    // Get the modal
-    var modal = document.getElementById("myModal3");
-
-    function openModal() {
-            modal.style.display = "block";
-            setTimeout(function() {
-                modal.classList.add("open");
-            }, 50); // Delay added to ensure the display property is applied before adding the 'open' class
-
-            document.body.classList.add('modal-open3');
-        }
-
-        function closeModal() {
-            modal.classList.remove("open");
-            setTimeout(function() {
-                modal.style.display = "none";
-            }, 500); // Delay added to match the transition duration
-            document.body.classList.remove('modal-open3'); 
-        }
-
-    // Close the modal when the user clicks anywhere outside of it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-            document.body.classList.remove('modal-open3'); 
-        }
+    // Function to increment the counter
+    function incrementCounter() {
+        // Parse the current counter value, remove any commas
+        let currentCount = parseInt(counter.innerText.replace(/,/g, ''), 10);
+        // Increment the counter value
+        currentCount++;
+        // Update the counter display with formatted number (with commas)
+        counter.innerText = currentCount.toLocaleString();
     }
-</script>
 
-<script>
-    const text = "Invest your first bitcoin today"; // The text you want to "type out"
-let index = 0;
-const speed = 90; // Speed of typing in milliseconds
-
-function typeWriter() {
-  if (index < text.length) {
-    document.getElementById("typing").innerHTML += text.charAt(index);
-    index++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
-// Start typing when the page loads
-document.addEventListener("DOMContentLoaded", function() {
-  typeWriter();
+    // Add a click event listener to the tapbutton image
+    tapButton.addEventListener('click', incrementCounter);
 });
 
-</script>
+   </script>
+ 
+
+
+
+
 </body>
 </html>
