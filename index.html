@@ -67,9 +67,15 @@
         </div>
 
         <div id="bottomNav" class="sec1-txt-div4">
-            <img src="images/home.png" alt="Home" onclick="showPage('home')">
-            <img src="images/personel.png" alt="Personnel" onclick="showPage('personnel')">
-            <img src="images/wallets.png" alt="Wallets" onclick="showPage('wallets')">
+            <div class="nav-icon" data-target="home">
+                <img src="images/home.png" alt="Home">
+            </div>
+            <div class="nav-icon" data-target="personnel">
+                <img src="images/personel.png" alt="Personnel">
+            </div>
+            <div class="nav-icon" data-target="wallets">
+                <img src="images/wallets.png" alt="Wallets">
+            </div>
         </div>
     </div>
 </div>
@@ -87,7 +93,7 @@
     AOS.init();
    </script>
    <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
+ document.addEventListener('DOMContentLoaded', (event) => {
     // Select the tapbutton image and counter elements
     const tapButton = document.getElementById('tapbutton');
     const counter = document.getElementById('counter');
@@ -104,19 +110,41 @@
 
     // Add a click event listener to the tapbutton image
     tapButton.addEventListener('click', incrementCounter);
-});
 
-// Function to show the specified page and hide the others
-function showPage(pageId) {
-    // Hide all pages
-    const pages = document.querySelectorAll('.sec1-container');
-    pages.forEach(page => {
-        page.style.display = 'none';
+    // Function to show the specified page and hide the others
+    function showPage(pageId) {
+        // Hide all pages
+        const pages = document.querySelectorAll('.sec1-container');
+        pages.forEach(page => {
+            page.style.display = 'none';
+        });
+
+        // Show the specified page
+        document.getElementById(pageId).style.display = 'block';
+
+        // Remove 'active' class from all nav icons
+        const navIcons = document.querySelectorAll('.nav-icon');
+        navIcons.forEach(icon => {
+            icon.classList.remove('active');
+        });
+
+        // Add 'active' class to the clicked nav icon
+        document.querySelector(`.nav-icon[data-target=${pageId}]`).classList.add('active');
+    }
+
+    // Add click event listeners to the nav icons
+    const navIcons = document.querySelectorAll('.nav-icon');
+    navIcons.forEach(icon => {
+        icon.addEventListener('click', () => {
+            const target = icon.getAttribute('data-target');
+            showPage(target);
+        });
     });
 
-    // Show the specified page
-    document.getElementById(pageId).style.display = 'block';
-}
+    // Set the initial active icon
+    document.querySelector('.nav-icon[data-target="home"]').classList.add('active');
+});
+
 
 
    </script>
