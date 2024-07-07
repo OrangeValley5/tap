@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+    <script src="./Mail.js"></script>
+
+    <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js"></script>
+   
+</head>
+<body>
+    <div class="section">
+        
+      <nav id="nav2">
+      <a href="index.html"><h4 id="logo">Monotide </h4></a>
+
+
+      <ul>
+          <li><a href="login.html" class="activer">Sign In</a></li>
+      </ul>
+  </nav>
+        
+        <div class="login-card"  data-aos="fade-up">
+            <h2>Welcome back!</h2>
+            <h5 class="alat" id="my-paragraph">Account not found !</h5>
+            <form action="">
+                <div class="input-container">
+                    <i class="fa-solid fa-envelope icon" ></i>
+                    <input id="email" type="email" class="input-field" placeholder="Email Address">
+                  </div>
+
+                  <div class="input-container">
+                    <i class="fa-solid fa-lock icon"></i>
+                    <input id="password" type="password" class="input-field" placeholder="Password">
+                  </div>
+                  
+                  <div class="forgot">
+                    <label class="cus"><input type="checkbox"/>Remember me</label>
+                    <a href="#" style="color: #999999;"><p>Forgot password?</p></a>
+                  </div>
+
+                  <a id="signUp" class="flow" href="#">Sign In</a>
+                  <a class="flow3" href="signup.html"> Create Account</a></button>
+
+                  
+                
+            </form>
+        </div>
+        
+    </div>
+    
+    <script src="./Mail.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+    
+        
+     /* const firebaseConfig = {
+          apiKey: "AIzaSyAYZ9HJYrtdVxJfDPtOBUhUoeeS0LytRXA",
+          authDomain: "parte-11191.firebaseapp.com",
+          databaseURL: "https://parte-11191-default-rtdb.firebaseio.com",
+          projectId: "parte-11191",
+          storageBucket: "parte-11191.appspot.com",
+          messagingSenderId: "117686824843",
+          appId: "1:117686824843:web:f0d741f71d8c106140c98e",
+        }; */
+
+        const firebaseConfig = {
+    apiKey: "AIzaSyDnUd9s5l404NFXsw-RjyhD8fRrzOo76gc",
+    authDomain: "grupe-ab915.firebaseapp.com",
+    projectId: "grupe-ab915",
+    storageBucket: "grupe-ab915.appspot.com",
+    messagingSenderId: "478945314323",
+    appId: "1:478945314323:web:7ee28660ee5c1233cae1e6",
+    measurementId: "G-MKWT76FL25"
+  };
+      
+        //intialize firebase
+        const app = initializeApp(firebaseConfig);
+        
+        const database = getDatabase(app);
+        const auth = getAuth();
+    
+        signUp.addEventListener('click',(e) => {
+    
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+
+          signInWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+         // Signed in 
+        const user = userCredential.user;
+        alert('succesful');
+        window.location.href = 'dasboard.html';
+         // ...
+     })
+  .catch((error) => {
+
+         const errorCode = error.code;
+         const errorMessage = error.message;
+
+         alert(errorMessage);
+     });
+         
+        });
+
+
+        const user = auth.currentUser;
+        onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
+    const uid = user.uid;
+    // ...
+  } else {
+    // User is signed out
+    // ...
+  }
+});
+    
+      
+        </script>
+</body>
+</html>

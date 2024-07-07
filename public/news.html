@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YR1205HWYG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YR1205HWYG');
+</script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Animation -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Monotide</title>
+
+   
+    <script src="./Mail.js"></script>
+    <script src="script.js" defer></script>
+
+    <script>
+        const name = localStorage.getItem('user_name');
+
+    if (name) {
+      const helloElement = document.getElementById('fName'); // Assuming 'heading' is the ID of the 'Hello' element.
+      helloElement.textContent = name;
+    }
+    
+      </script>
+
+<script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js"></script>
+    
+</head>
+<body >
+
+   
+
+   
+    <div>
+        <div class="section1b" >
+
+
+            <div id="myModal2" class="modal2">
+                <div class="modal-content2">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    
+                    <p>This is a modal that pops up when i arrive on the dashboard page.</p>
+        
+                    <div class="cirx">
+        
+                    </div>
+        
+                </div>
+            </div>
+
+            <h2 onclick="openModal()">Make Payment</h2>
+            <div class="new-cont">
+            
+            <p class="cont-subtitle">You are to make a payment of $25 using
+                your selected payment method. Screenshot
+                and upload the proof of payment
+            </p>
+
+
+            <div class="pay-options">
+
+                <img src="images/btc.png" alt="">
+                <p>Bitcoin</p>
+            </div>
+
+            
+
+            <input id="username" type="text" class="input-field" placeholder="Username">
+  <input id="age" type="number" class="input-field" placeholder="Age">
+  <input id="firstname" type="text" class="input-field" placeholder="First Name">
+  <input id="lastname" type="text" class="input-field" placeholder="Last Name">
+  <input id="hobbies" type="text" class="input-field" placeholder="Hobbies">
+            
+
+           
+
+            <input id="push" type="text" class="input-field" placeholder="Referral code">
+
+                <a id="submitButton" href="#">PUSHe</a>
+           
+
+           
+
+
+            <a class="pay-btn" href="checkout.html"> Submit Payment</a></button>
+
+            </div>
+
+       
+
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+    apiKey: "AIzaSyDnUd9s5l404NFXsw-RjyhD8fRrzOo76gc",
+    authDomain: "grupe-ab915.firebaseapp.com",
+    projectId: "grupe-ab915",
+    databaseURL: "https://grupe-ab915-default-rtdb.firebaseio.com/",
+    storageBucket: "grupe-ab915.appspot.com",
+    messagingSenderId: "478945314323",
+    appId: "1:478945314323:web:7ee28660ee5c1233cae1e6",
+    measurementId: "G-MKWT76FL25"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    
+      
+    // Add event listener to the button
+    document.getElementById("submitButton").addEventListener("click", function() {
+
+        
+      // Get values of all input fields
+      var username = document.getElementById("username").value;
+      var age = document.getElementById("age").value;
+      var firstname = document.getElementById("firstname").value;
+      var lastname = document.getElementById("lastname").value;
+      var hobbies = document.getElementById("hobbies").value;
+      var referralCode = document.getElementById("push").value;
+      
+      //alert('doing');
+      
+      // Get a reference to the database service
+      var database = firebase.database();
+
+      // Push the user object to your Firebase Database
+      database.ref('users').push({
+        username: username,
+        age: age,
+        firstname: firstname,
+        lastname: lastname,
+        hobbies: hobbies,
+        referralCode: referralCode
+      }).then(function() {
+        alert('done');
+        console.log("User data sent to Firebase Database successfully!");
+        // Clear the input fields after sending the user data
+        document.getElementById("username").value = "";
+        document.getElementById("age").value = "";
+        document.getElementById("firstname").value = "";
+        document.getElementById("lastname").value = "";
+        document.getElementById("hobbies").value = "";
+        document.getElementById("push").value = "";
+      }).catch(function(error) {
+        alert(error);
+        console.error("Error sending user data to Firebase Database:", error);
+      });
+    });
+  </script>
+
+
+
+ 
+
+</body>
+</html>

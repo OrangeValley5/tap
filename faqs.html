@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>Grupe</title>
+</head>
+<body>
+    <nav id="nav2">
+        <a href="index.html"><h4 id="logo">Monotide </h4></a>
+
+        <ul>
+            <li><a href="login.html" class="activer">Sign In</a></li>
+        </ul>
+    </nav>
+    
+    <div class="faq-header">
+        <h3>Frequently asked questions(Faqs)</h3>
+        <p>This is an overview on the  
+            most frequently asked questions by our users and 
+             and the best and detailed answers to your questions.</p>
+    </div>
+
+
+     <div class="faq-cont">
+
+
+        <div class="faq">
+            <div class="question">
+              <span>Is this website an ICO</span>
+              <div class="answer">
+                No. This is not an Initial Coin Offering. We
+                 believe that ICO's should be approached with
+                  caution as the majority of "Alt coins" do not 
+                  offer any benefits to more established crypto 
+                  currencies such as Bitcoin, Ethereum, etc. Monotide  
+                  is a managed cryptocurrency trading platform with user friendly interface and attractive offer.
+              </div>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+
+            <div class="question">
+              <span>What markets do you trade</span>
+              <div class="answer">
+                Tradeable Coins: Bitcoin, Litecoin, Ethereum, Bitcoin Cash and XRP.
+              </div>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+
+            <div class="question">
+              <span>What is the risk for my investment</span>
+              <div class="answer">
+                There is no risk whatsoever. Just invest and enjoy the financial freedom..
+              </div>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+
+            <div class="question">
+              <span>How can i access my account ?</span>
+              <div class="answer">
+                If you are a registered user of Monotide, please enter your email and password in the appropriate fields at the top of the website and click the "Login to Account" button. You will be redirected to your account automatically as soon as you have done the above.
+              </div>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+
+            <div class="question">
+              <span>Is there any limit for an investment account ? How can i keep my accout safe</span>
+              <div class="answer">
+                We take all security measures to protect your account and keep it safe from third parties intrusion.
+              </div>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+
+            <div class="question">
+              <span>What is the process of investing ?</span>
+              <div class="answer">
+                To make investments you should register with Monotide, create an account and then you can make your deposit. All the investments are made in your personal account after login
+              </div>
+              <i class="fa fa-chevron-down"></i>
+            </div>
+           
+          </div>
+
+          <div class="faq">
+
+
+            <div class="question">
+                <span>I forgot my password</span>
+                <div class="answer">
+                    Go to Password Reminder section, enter your registration e-mail address and follow the instructions.
+                </div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div class="question">
+                <span>How can i create an account</span>
+                <div class="answer">
+                    It's not difficult at all. Click on the following button, fill in the registration form and create a new account.
+                </div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+              <div class="question">
+                <span>Can i create more than one account ?</span>
+                <div class="answer">
+                    No. you are allowed to create only one account. For special situations please contact our Customer Support.
+                </div>
+                <i class="fa fa-chevron-down"></i>
+              </div>
+
+          </div>
+          
+
+     </div>
+
+
+
+     <footer>
+      <h3>Monotide</h3>
+      <p class="footer-text">
+          *Stocks and ETFs are underlying assets of the contracts offered as Monotide
+           Stocks and are brought to you by Monotide Financial Services. 
+          For more information consult the prospectus at monotide.com. Capital at risk.
+      </p>
+
+      <h3 class="useful-links">Useful <span>Links</span></h3>
+      <div class="footer-menu">
+          <div class="footer-item">
+              <a href="index.html"><p>Home</p></a>
+              <a href="faqs.html"><p>Faq</p></a>
+              <a href="terms.html"><p>Terms                                                                                                                         condition</p></a>
+              <a href="privacy.html"><p>Privacy policy</p></a>
+              <a href="preview.html"><p>Start investing</p></a>
+          </div>
+
+          <div class="footer-item">
+              <a href="about.html"><p>Company</p></a>
+              <a href=""><p>Contact us</p></a>
+              <a href="aml.html"><p>AML Policy</p></a>
+              <a href="pay.html"><p>Payment policy</p></a>
+              
+          </div>
+      </div>
+      <hr />
+      <div class="subber">
+          <p>&copy; Monotide</p>
+          <a href=""><p>Privacy policy</p></a>
+      </div>
+  </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        const questions = document.querySelectorAll('.question');
+
+questions.forEach((question) => {
+  question.addEventListener('click', () => {
+    question.classList.toggle('actived');
+    const icon = question.querySelector('i');
+    icon.classList.toggle('rotate'); // Toggle the rotate class on the icon
+  });
+});
+
+    </script>
+</body>
+</html>

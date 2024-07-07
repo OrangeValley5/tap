@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="identity.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login</title>
+    <script src="./Mail.js"></script>
+
+    <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js"></script>
+    <script>
+        
+
+
+    </script>
+</head>
+<body>
+    <div class="section">
+        
+        <h4>Personal Information</h4>
+        <p class="sub-txt">In order for us to successfully verify and approve your request please ensure you provide us with the correct information</p>
+        
+        <div class="login-card"  data-aos="fade-up">
+            <!--<h2>Personal Information</h2>-->
+            
+            <form action="">
+                <p>First Name</p>
+                <div class="input-container">
+                
+                    <input id="email" type="email" class="input-field" placeholder="First Name">
+                  </div>
+
+                  <p>Middle Name</p>
+
+                  <div class="input-container">
+                    <input type="text" class="input-field" placeholder="Optional">
+                  </div>
+
+                  <p>Last Name</p>
+                  <div class="input-container">
+                    <input type="text" class="input-field" placeholder="Enter your last name">
+                  </div>
+
+                  <p>State of origin </p>
+                  <div class="input-container">
+                    <input type="text" class="input-field" placeholder="Your state of origin">
+                  </div>
+
+                  <p>Phone Number</p>
+                  <div class="input-container">
+                    <input type="number" class="input-field" placeholder="080********">
+                  </div>
+
+                  <p>Home Address</p>
+                  <div class="input-container">
+                    <input type="text" class="input-field" placeholder="Where do you live ?">
+                  </div>
+
+                  <p>Gender</p>
+                  <ul class="gender-list ">
+                    <li>
+                      <input type="radio" id="male" name="gender" value="male">
+                      <label for="male">Male</label>
+                    </li>
+                    <li>
+                      <input type="radio" id="female" name="gender" value="female">
+                      <label for="female">Female</label>
+                    </li>
+                  </ul>
+
+                  <p>Age</p>
+                  <ul class="gender-list ">
+                    <li>
+                      <input class="radio" type="radio" id="20-35yrs" name="age" value="20-35yrs">
+                      <label for="20-35yrs">20-35yrs</label>
+                    </li>
+                    <li>
+                      <input class="radio" type="radio" id="35-45yrs" name="age" value="35-45yrs">
+                      <label for="35-45yrs">35-45yrs</label>
+                    </li>
+                    <li>
+                        <input class="radio" type="radio" id="45-55yrs" name="age" value="45-55yrs">
+                        <label for="45-55yrs">45-55yrs</label>
+                      </li>
+                  </ul>
+
+                  <p>Marital status</p>
+                  <ul class="gender-list ">
+                    <li>
+                      <input class="radio" type="radio" id="single" name="marital" value="single">
+                      <label for="single">Single</label>
+                    </li>
+                    <li>
+                      <input class="radio" type="radio" id="female" name="marital" value="married">
+                      <label for="married">Married</label>
+                    </li>
+                    <li>
+                        <input class="radio" type="radio" id="female" name="marital" value="others">
+                        <label for="others">Others</label>
+                      </li>
+                  </ul>
+                  
+                  
+                  
+                 
+
+                  <a class="flow"  onclick="payWithMonnify()" href="additional.html">Continue</a>
+
+                  
+                
+            </form>
+        </div>
+        
+    </div>
+    
+    <script src="./Mail.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>

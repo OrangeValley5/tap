@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Create account</title>
+    <script src="./Mail.js"></script>
+
+    <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js"></script>
+    <style>
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 28px;
+      }
+      
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 20px;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 4px;
+        border-radius: 100%;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      input:checked + .slider {
+        background-color: #2196F3;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+      
+      
+                /* Media query for mobile */
+                @media screen and (max-width: 768px) {
+      
+                  .switch {
+                      position: relative;
+                      display: inline-block;
+                      width: 45px;
+                      height: 22px;
+      
+                  }
+      
+                  .slider:before {
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        left: 4px;
+        border-radius: 100%;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+              }
+      
+    </style>
+</head>
+<body>
+
+  <div id="myModal8" class="modal8"> 
+    <div class="modal-content8">
+
+      
+      <div class="loader"></div>
+    </div>
+</div>
+
+
+    <div class="section">
+        
+      <nav id="nav2">
+        <a href="index.html"><h4 id="logo">Monotide </h4></a>
+  
+        <ul>
+            <li><a href="login.html" class="activer">Sign In</a></li>
+        </ul>
+    </nav>
+        
+        <div class="login-card"  data-aos="fade-up">
+            <h5>Create your monotide account</h5>
+            
+            <form action="">
+
+              <div class="input-container">
+                <i class="fa-solid fa-user icon" ></i>
+                <input id="firstName" type="text" class="input-field" placeholder="First Name">
+              </div>
+
+              <div class="input-container">
+                <i class="fa-solid fa-user icon" ></i>
+                <input id="lastName" type="text" class="input-field" placeholder="Last Name">
+              </div>
+
+
+                <div class="input-container">
+                    <i class="fa-solid fa-envelope icon" ></i>
+                    <input id="email" type="email" class="input-field" placeholder="Email Address">
+                  </div>
+
+                  <div class="input-container">
+                    <i class="fa-solid fa-lock icon"></i>
+                    <input id="password" type="password" id="password" class="input-field" placeholder="Password"  oninput="checkPasswordStrength(), hidePasswordRequirements()" onfocus="showPasswordRequirements()">
+
+                    <span  class="password-toggle" onclick="togglePasswordVisibility()">
+                     <img id="togglePassword" src="images/eyeclosed.png" width="20px" height="20px" alt="">
+                  </span>
+
+                  
+                </div>
+
+                <div class="input-container">
+                  <i class="fa-solid fa-paper-plane icon" ></i>
+                  <input id="refer" type="text" class="input-field" placeholder="Referral code">
+                </div>
+
+
+                
+
+
+                <div id="passwordRequirements" class="notification">
+                  Password must contain at least one uppercase letter, one number, one special character, and be at least 8 characters long.
+              </div>
+
+               
+                <div id="passwordStrength" class="password-strength">
+                    <div class="strength-bar" id="uppercase-bar"></div>
+                    <div class="strength-bar" id="number-bar"></div>
+                    <div class="strength-bar" id="special-char-bar"></div>
+                    <div class="strength-bar" id="length-bar">
+                      
+                    </div>
+                </div>
+
+                <div class="terms-box">
+                  <p>
+                    I agree to the Monotide Payments <a href="terms.html">T&Cs, Monotide Metals 
+                    T&Cs Monotide Group T&Cs </a> and confirm 
+                    I’m acting under my own name and on my own behalf.
+                  </p>
+
+                  <label class="switch">
+                    <input type="checkbox" id="toggleSwitch1">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                <div class="terms-box">
+                  <p>
+                    I agree to the Monotide <a href="privacy.html">Privacy Policy</a>
+                  </p>
+
+                  <label class="switch">
+                    <input type="checkbox" id="toggleSwitch2">
+                    <span class="slider"></span>
+                  </label>
+                </div>
+
+                  <a id="signUp" onclick="validateForm()" class="flow disabled" >Create Account</a>
+                  <a class="flow3" href="login.html"> Sign In</a>
+
+                  
+                
+            </form>
+        </div>
+        
+    </div>
+    
+    <script src="./Mail.js"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+<script>
+
+  function checkPasswordStrength() {
+      let password = document.getElementById("password").value;
+      let lengthBar = document.getElementById("length-bar");
+      let uppercaseBar = document.getElementById("uppercase-bar");
+      let numberBar = document.getElementById("number-bar");
+      let specialCharBar = document.getElementById("special-char-bar");
+
+      // Check length
+      if (password.length >= 8) {
+          lengthBar.classList.remove("weak", "moderate", "strong");
+          lengthBar.classList.add("very-strong");
+      } else if (password.length >= 6) {
+          lengthBar.classList.remove("weak", "moderate", "very-strong");
+          lengthBar.classList.add("strong");
+      } else {
+          lengthBar.classList.remove("moderate", "strong", "very-strong");
+          lengthBar.classList.add("weak");
+      }
+
+      // Check for uppercase letters
+      if (/[A-Z]/.test(password)) {
+          uppercaseBar.classList.remove("weak", "moderate", "strong");
+          uppercaseBar.classList.add("very-strong");
+      } else {
+          uppercaseBar.classList.remove("moderate", "strong", "very-strong");
+          uppercaseBar.classList.add("weak");
+      }
+
+      // Check for numbers
+      if (/\d/.test(password)) {
+          numberBar.classList.remove("weak", "moderate", "strong");
+          numberBar.classList.add("very-strong");
+      } else {
+          numberBar.classList.remove("moderate", "strong", "very-strong");
+          numberBar.classList.add("weak");
+      }
+
+      // Check for special characters
+      if (/[^A-Za-z0-9]/.test(password)) {
+          specialCharBar.classList.remove("weak", "moderate", "strong");
+          specialCharBar.classList.add("very-strong");
+      } else {
+          specialCharBar.classList.remove("moderate", "strong", "very-strong");
+          specialCharBar.classList.add("weak");
+      }
+  }
+
+  function togglePasswordVisibility() {
+      let passwordInput = document.getElementById("password");
+      const toggleIcon = document.getElementById("togglePassword");
+      if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          toggleIcon.src = "images/eyeopen.png";
+      } else {
+          passwordInput.type = "password";
+          toggleIcon.src = "images/eyeclosed.png";
+      }
+  }
+
+
+  function showPasswordRequirements() {
+            document.getElementById("passwordRequirements").style.display = "block";
+        }
+
+        function hidePasswordRequirements() {
+            document.getElementById("passwordRequirements").style.display = "none";
+        }
+   
+</script>
+
+<script>
+  function ally(){
+    alert("access denied")
+  }
+</script>
+
+<script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+  import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+  
+      
+ 
+  const firebaseConfig = {
+    apiKey: "AIzaSyDnUd9s5l404NFXsw-RjyhD8fRrzOo76gc",
+    authDomain: "grupe-ab915.firebaseapp.com",
+    projectId: "grupe-ab915",
+    databaseURL: "https://grupe-ab915-default-rtdb.firebaseio.com/",
+    storageBucket: "grupe-ab915.appspot.com",
+    messagingSenderId: "478945314323",
+    appId: "1:478945314323:web:7ee28660ee5c1233cae1e6",
+    measurementId: "G-MKWT76FL25"
+  };
+    
+      //intialize firebase
+      const app = initializeApp(firebaseConfig);
+      
+      const database = getDatabase(app);
+      const auth = getAuth();
+  
+      signUp.addEventListener('click',(e) => {
+
+        validateForm();
+  
+       
+      });
+
+
+      function validateForm() {
+        var firstName = document.getElementById('firstName').value.trim();
+        var lastName = document.getElementById('lastName').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var password = document.getElementById('password').value.trim();
+
+        if (firstName === '' || lastName === '' || email === '' || password === '') {
+            alert('Please fill in all fields.');
+        } else {
+           // alert('Form submitted successfully.');
+            // You can submit the form or perform other actions here
+
+            openModal1();
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var name = document.getElementById('firstName').value;
+  
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up 
+      const user = userCredential.user;
+      closeModal1();
+      alert('Account created successfully');
+    localStorage.setItem('user_name', name);
+  
+      set(ref(database, 'users/' + user.uid), {
+        name: name,
+        email: email
+      })
+
+      saveNames();
+  
+      window.location.href = 'dasboard.html';
+      // ...
+    })
+    .catch((error) => {
+
+      closeModal1();
+      const errorCode = error.code;
+      const errorMessage = error.message;
+  
+      alert(errorMessage);
+      // ..
+    });
+        }
+    }
+
+
+   
+
+    
+      </script>
+
+<script>
+  function saveNames() {
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      localStorage.setItem('firstName', firstName);
+      localStorage.setItem('lastName', lastName);
+      localStorage.setItem('email', email);
+  }
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const toggleSwitch1 = document.getElementById('toggleSwitch1');
+      const toggleSwitch2 = document.getElementById('toggleSwitch2');
+      const signUpButton = document.getElementById('signUp');
+
+      function updateButtonState() {
+          if (toggleSwitch1.checked && toggleSwitch2.checked) {
+              signUpButton.classList.remove('disabled');
+          } else {
+              signUpButton.classList.add('disabled');
+          }
+      }
+
+      toggleSwitch1.addEventListener('change', updateButtonState);
+      toggleSwitch2.addEventListener('change', updateButtonState);
+  });
+</script>
+
+<script>
+  // Get the modal
+  var modal6 = document.getElementById("myModal6");
+
+  modal6.style.display = "none";
+
+  function openModal2() {
+          modal6.style.display = "block";
+          setTimeout(function() {
+              modal6.classList.add("open6");
+          }, ); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open6');
+      }
+
+      function closeModal2() {
+          modal6.classList.remove("open6");
+          setTimeout(function() {
+              modal6.style.display = "none";
+          }, 50); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open6'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+ 
+</script>
+
+<script>
+  // Get the modal
+  var modal8 = document.getElementById("myModal8");
+
+  modal8.style.display = "none";
+
+  function openModal1() {
+          modal8.style.display = "block";
+          setTimeout(function() {
+              modal8.classList.add("open8");
+          }, ); // Delay added to ensure the display property is applied before adding the 'open' class
+
+          document.body.classList.add('modal-open8');
+      }
+
+      function closeModal1() {
+          modal8.classList.remove("open8");
+          setTimeout(function() {
+              modal8.style.display = "none";
+          }, 50); // Delay added to match the transition duration
+          document.body.classList.remove('modal-open8'); 
+      }
+
+  // Close the modal when the user clicks anywhere outside of it
+ 
+</script>
+
+
+</body>
+</html>

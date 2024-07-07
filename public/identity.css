@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+
+.login-card{
+    height: 100%;
+    width: 500px;
+    background-color: #191e23;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.login-card form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-container {
+    position: relative;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: gray;
+  }
+
+  @media (max-width: 900px){
+    .section{
+        padding: 5rem 1.5rem;
+    }
+
+    .login-card{
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+
+    .login-card input{
+        font-size: 12px;
+    }
+
+    .flow{
+        font-size: 12px;
+    }
+
+    .login-card p{
+        font-size: 12px;
+    }
+
+    .icon{
+        font-size: 12px;
+    }
+  }
+
+
+ 
+  
+ 
+ 
+
+  
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 0px;
+    font-family: 'Poppins';
+    color: #191e23;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(0,0,0,1.85), rgba(0,0,0,0.85)),
+    url(https://images.unsplash.com/photo-1579546928937-641f7ac9bced?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=339&q=80); 
+}
+
+
+
+
+
+/*  --------LOGIN-------  */
+
+.section{
+    /** height: 100vh; **/
+    color: #191e23;
+    background-image: linear-gradient(rgba(0,0,0,1.85), rgba(0,0,0,0.85)),
+    url(https://images.unsplash.com/photo-1579546928937-641f7ac9bced?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=339&q=80); 
+    background-size: cover;
+    background-position: center;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*filter: blur(10px);  Add the blur effect */
+    padding: 5rem 5rem;
+}
+
+.section h1{
+    color: white;
+    font-size: 40px;
+}
+
+.section p{
+    font-size: 14px;
+    
+}
+
+.section h4{
+    color: white;
+    font-size: 18px;
+    margin-top: -50px;
+    text-align: start;
+}
+
+
+
+.login-card{
+    height: 100%;
+    width: 500px;
+    background-color: #191e23;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.login-card form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-container {
+    position: relative;
+  }
+  
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: gray;
+  }
+
+
+ 
+  
+  .login-card .input-field {
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #555;
+    font-family: 'Poppins';
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+  }
+
+  .login-card2 .input-field {
+    padding-left: 30px;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #555;
+    font-family: 'Poppins';
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+  }
+
+  .login-card button{
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    background-color: rgb(0, 228, 87);
+    color: white;
+    margin-top: 20px;
+    border: none;
+  }
+
+  .flow{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    background-color: rgb(0, 228, 87);
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px 0;
+  }
+  
+ 
+
+
+  .login-card .create{
+    background-color: transparent;
+    
+  }
+
+ 
+
+  @media (max-width: 900px){
+    .section{
+        padding: 5rem 1.5rem;
+    }
+
+    .login-card{
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+
+    .login-card input{
+        font-size: 12px;
+    }
+
+    .flow{
+        font-size: 12px;
+    }
+
+    .login-card p{
+        font-size: 12px;
+    }
+
+  
+  }
+
+
+  .col1 p{
+    font-size: 12px;
+    color: #939393;
+  }
+
+  .section .sub-txt{
+    color: #939393;
+    font-size: 10px;
+    margin-bottom: 20px;
+    
+  }
+
+  .gender-list {
+    list-style-type: none;
+    padding: 0.8rem;
+    margin: 0;
+    border-radius: 5px;
+    font-size: 10px;
+    background: transparent;
+    border: 1px solid #555;
+  }
+
+  .gender-list label{
+    margin-left: 5px;
+  }
+  
+  .gender-list li {
+    margin-right: 10px; /* Adjust spacing between items as needed */
+  }
+
+
+.dropdown{
+    min-width: 15em;
+    position: relative;
+}
+
+.select{
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #555;
+    font-family: 'Poppins';
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.select-clicked{
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover{
+    background: #323741;
+}
+
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.caret-rotate{
+    transform: rotate(180deg);
+}
+
+
+.menu{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background: #2a2d35;
+}
+
+.active {
+background: #23242a;
+}
+
+.menu-open {
+    display: block;
+    opacity: 1;
+}
+
+/* Hide the dropdown menu by default */
+.menu {
+    display: none;
+  }
+  
+  /* Style the select element */
+  .select {
+    cursor: pointer;
+  }
+  
+  /* Add styles for the active item */
+  .menu li.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+
+  .select2{
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid #555;
+    font-family: 'Poppins';
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: white;
+}
+
+.menu2{
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    display: none;
+    transform: translateX(-50%);
+    transition: 0.2s;
+    z-index: 1;
+    max-height: 200px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+.dropdown2{
+    min-width: 15em;
+    position: relative;
+}
+
+
+.caret2{
+    width: 0;
+    height: 0;
+    margin-right: 8px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.selected2{
+  color: white;
+  font-size: 12px;
+}
+
+.caret2 {
+  transition: transform 0.3s; /* Adjust the duration as needed */
+}
+
+/* Apply a rotated state when the dropdown is open */
+.caret2.caret2-rotate {
+  transform: rotate(180deg);
+}
+
+.menu2 li{
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.menu2 li.active2 {
+  background-color: rgb(0, 170, 65);
+  color: #fff;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YR1205HWYG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YR1205HWYG');
+</script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="images/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- Animation -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Grupe</title>
+
+   
+    <script src="./Mail.js"></script>
+    <script src="script.js" defer></script>
+
+    <script>
+        const name = localStorage.getItem('user_name');
+
+    if (name) {
+      const helloElement = document.getElementById('fName'); // Assuming 'heading' is the ID of the 'Hello' element.
+      helloElement.textContent = name;
+    }
+    
+      </script>
+
+    
+</head>
+<body >
+
+   
+
+   
+    <div>
+        <div class="section1b" >
+
+            <h2>Fund Wallet</h2>
+            <div class="new-cont">
+            
+            <h6>Enter amount</h6>
+
+            <input class="amountbx"  type="text">
+
+
+            <h6>Choose your preferred funding method</h6>
+
+            <div class="pay-options">
+
+                <img src="images/btc.png" alt="">
+                <p>Bitcoin</p>
+            </div>
+
+            <div class="pay-options">
+
+                <img src="images/eth.png" alt="">
+                <p>Ethereum</p>
+            </div>
+
+            <div class="pay-options">
+
+                <img src="images/capp.png" alt="">
+                <p>Cashapp</p>
+            </div>
+
+            <div class="pay-options">
+
+                <img src="images/apple.png" alt="">
+                <p>Apple pay</p>
+            </div>
+
+            <div class="pay-options">
+
+                <img src="images/gpay.png" alt="">
+                <p>Google pay</p>
+            </div>
+
+
+            <a class="pay-btn" href="checkout.html"> Continue</a></button>
+
+            </div>
+
+            
+
+            
+
+            
+           
+           
+
+
+           
+       
+
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js"></script>
+    <script src="./Mail.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+
+
+
+
+<script>
+    // Function to retrieve and display data from local storage
+    function retrieveDataFromLocalStorage() {
+        const savedBankName = localStorage.getItem('selectedBank');
+        const savedAccountNumber = localStorage.getItem('accountNumber');
+        const savedAmount = localStorage.getItem('savedAmount1');
+        const savedDate = localStorage.getItem('savedDate');
+        const savedDuration = localStorage.getItem('dury');
+        const savedLastName = localStorage.getItem('lastName');
+        const savedfirstName = localStorage.getItem('user_name');
+
+
+
+        const bankNameElement = document.getElementById('bankName');
+        const accountNumberElement = document.getElementById('accountNumber');
+        const loanAmountElement = document.getElementById('loanAmount');
+
+        const applyDateElement = document.getElementById('applyDate');
+        const applyDurationElement = document.getElementById('durationValue');
+        const lastNameElement = document.getElementById('lName');
+        const firstNameElement = document.getElementById('fName');
+
+
+
+
+        if (savedBankName) {
+            bankNameElement.textContent = savedBankName;
+        }
+
+        if (savedAccountNumber) {
+            accountNumberElement.textContent = savedAccountNumber;
+        }
+
+        if (savedAmount) {
+            loanAmountElement.textContent = savedAmount;
+        }
+
+        if (savedDate) {
+            applyDateElement.textContent = savedDate;
+        }
+
+
+        if (savedLastName) {
+            lastNameElement.textContent = savedLastName;
+        }
+
+        if (savedfirstName) {
+            firstNameElement.textContent = savedfirstName;
+        }
+
+       
+    }
+
+    // Call the retrieve function when the page loads
+    retrieveDataFromLocalStorage();
+
+</script>
+
+
+
+
+
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Show the modal when the page loads
+    window.onload = function() {
+        modal.style.display = "block";
+    }
+
+    // Close the modal when the user clicks anywhere outside of it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "block";
+        }
+    }
+</script>
+
+ 
+
+</body>
+</html>
