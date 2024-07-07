@@ -325,6 +325,10 @@ nav a{
                 box-shadow: 0 0 10px 2px rgb(0, 255, 0); /* Add a green glow effect */
             }
             
+
+            #counter{
+                font-size: 60px;
+            }
            
             
 
