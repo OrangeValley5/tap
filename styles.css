@@ -231,6 +231,15 @@ nav a{
 
             }
 
+            #home{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 20px;
+                font-family: Bricolage Grotesque;
+
+            }
+
             .sec1-img-div {
                 position: relative;
                 animation: moveUpDown 5s infinite alternate;
