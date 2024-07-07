@@ -30,7 +30,7 @@ nav{
     align-items: center;
     gap: 2rem;
     padding: 0rem 4rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-family: Bricolage Grotesque;
 }
 nav span{
@@ -92,7 +92,6 @@ nav a{
 
 
 .section1 p{
-    margin-top: 2rem;
     font-family: Bricolage Grotesque;
 
 }
@@ -223,6 +222,7 @@ nav a{
 
     
 
+
             .sec1-container{
                 display: flex;
                 flex-direction: row;
@@ -230,6 +230,38 @@ nav a{
                 font-family: Bricolage Grotesque;
 
             }
+            
+            .Walletdiv div{
+                background-color: rgba(255, 255, 255, 0.278); /* White background with 80% opacity */
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+                border-radius: 8px;
+                font-size: 10px;
+                
+            }
+
+            .Walletdiv p{
+                margin-left: 4px;
+            }
+
+            .Walletdiv{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                
+               
+            }
+
+            .Walletdiv img{
+                width: 20px;
+                height: 20px;
+               
+            }
+
 
             #home{
                 display: flex;
@@ -298,6 +330,11 @@ nav a{
             .sec1-txt-div3 img{
                 width: 24px;
                 height: 24px;
+            }
+
+            .sec1-txt-div3 h5{
+                font-size: 18px;
+                margin-left: 6px;
             }
 
             #tapbutton {
