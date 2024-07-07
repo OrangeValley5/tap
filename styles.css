@@ -299,6 +299,10 @@ nav a{
                 height: 24px;
             }
 
+            #tapbutton {
+                touch-action: manipulation; /* Prevents zooming on double-tap */
+            }
+
             .sec1-txt-div4{
                 width: 100%;
                 display: flex;
